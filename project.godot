@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Fruitiger Aero Zombie Game"
-run/main_scene="res://scenes/game.tscn"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://cw5bbwudkmgx"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [rendering]

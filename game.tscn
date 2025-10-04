@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw5bbwudkmgx"]
+
+[ext_resource type="PackedScene" uid="uid://ykvexttrh0yi" path="res://Player.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://b67ih8ahe4jfc" path="res://assets/game assets/plank.webp" id="1_e2o6t"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_mwb40"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feb5d"]
+albedo_texture = ExtResource("1_e2o6t")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mwb40"]
+
+[node name="Game" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_mwb40")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(19.9037, 0, 0, 0, 0.0815831, 0, 0, 0, 19.9037, 0, -0.0581415, 0)
+material_override = SubResource("StandardMaterial3D_feb5d")
+mesh = SubResource("BoxMesh_mwb40")
+
+[node name="Player" parent="." instance=ExtResource("1_80nbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0464001, 1, -0.399681)
